@@ -1,0 +1,219 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #042254;
+}
+
+/* HEADER */
+.topnav {
+  overflow: hidden;
+  position: relative;
+}
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 2rem;
+  display: block;
+}
+
+.topnav div.container-btn-menu {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+.container-btn-menu {
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: rgb(255, 255, 255);
+  margin: 6px 0;
+  transition: 0.3s;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(199, 199, 199);
+  background-color: rgba(199, 199, 199, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #fff;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #042254;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+/* END HEADER */
+
+/* TITLE CONTENT */
+
+div.content h1 {
+  margin-top: 5rem;
+  text-align: center;
+  color: white;
+}
+
+div.content p {
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+/* END TITLE CONTENT */
+
+/* CARD */
+.container-card {
+  margin: 75px;
+  text-align: center;
+  margin-bottom: 75px;
+}
+.flip-card {
+  background-color: transparent;
+  width: 25vw;
+  height: 25vw;
+  perspective: 1000px;
+  display: inline-block;
+  margin-right: 75px;
+  margin-top: 75px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 25vw;
+  height: 25vw;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.avatar {
+  width: 25vw;
+  height: 25vw;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 25vw;
+  height: 25vw;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* END CARD */
+
+/* FOOTER */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  height: 50px;
+}
+
+.footer .icon-footer {
+  width: 35px;
+  height: 35px;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+/* END FOOTER */
+
+/* MOBILE CSS */
+@media only screen and (max-width: 600px) {
+  .container-card {
+    margin: unset;
+    margin-bottom: 75px;
+  }
+
+  div.content h1 {
+    margin-top: unset;
+    text-align: center;
+    color: white;
+  }
+
+  .flip-card {
+    background-color: transparent;
+    width: 80vw;
+    height: 80vw;
+    perspective: 1000px;
+    margin: 0 auto;
+    margin-top: 75px;
+  }
+  .avatar,
+  .flip-card-inner,
+  .flip-card-front,
+  .flip-card-back {
+    width: 80vw;
+    height: 80vw;
+  }
+}
+/* END MOBILE CSS */
